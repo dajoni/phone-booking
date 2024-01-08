@@ -36,9 +36,12 @@ class ImportPhones(
       newSuspendedTransaction {
         props.phones
           .map { cfg ->
-            val (_, phoneId) = with(addPhoneUseCase) { PhoneCommand.AddPhoneCommand(cfg.name.phoneName()).runUseCase() }.getOrElse { throw java.lang.RuntimeException() }
+            val (_, phoneId) = with(addPhoneUseCase) {
+              PhoneCommand.AddPhoneCommand(cfg.name.phoneName()).runUseCase() }.getOrElse { throw java.lang.RuntimeException()
+            }
             for (i in 1..cfg.count) {
-              with(addPhoneToStockUseCase) { PhoneCommand.AddPhoneToStockCommand(phoneId, user).runUseCase() }.getOrElse { throw java.lang.RuntimeException() }
+              with(addPhoneToStockUseCase) {
+                PhoneCommand.AddPhoneToStockCommand(phoneId, user).runUseCase() }.getOrElse { throw java.lang.RuntimeException() }
             }
           }
       }

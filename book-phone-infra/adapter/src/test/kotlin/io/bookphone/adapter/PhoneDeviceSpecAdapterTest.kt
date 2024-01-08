@@ -33,7 +33,8 @@ internal class PhoneDeviceSpecAdapterTest {
     assertTrue { phoneSpec.networkSpec.technology.equals("GSM / CDMA / HSPA / EVDO / LTE / 5G") }
     assertTrue { phoneSpec.networkSpec.net2g.equals("GSM 850 / 900 / 1800 / 1900 - SIM 1 & SIM 2") }
     assertTrue { phoneSpec.networkSpec.net3g.equals("HSDPA 800 / 850 / 900 / 1700(AWS) / 1900 / 2100") }
-    assertTrue { phoneSpec.networkSpec.net4g.equals("1, 2, 3, 4, 5, 7, 8, 12, 13, 17, 18, 19, 20, 25, 26, 28, 32, 38, 39, 40, 41, 42, 48, 66 - International") }
+    assertTrue { phoneSpec.networkSpec.net4g.equals("1, 2, 3, 4, 5, 7, 8, 12, 13, 17, 18, 19, 20, 25, 26, " +
+      "28, 32, 38, 39, 40, 41, 42, 48, 66 - International") }
   }
 
   @Test

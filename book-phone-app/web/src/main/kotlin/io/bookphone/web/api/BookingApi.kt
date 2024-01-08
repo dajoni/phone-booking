@@ -24,7 +24,8 @@ interface BookingApi {
             value = ["/booking"],
             produces = ["application/json"]
     )
-    suspend fun getBooking(@RequestParam(value = "limit", required = false) limit: kotlin.Int?, @RequestParam(value = "offset", required = false) offset: kotlin.Int?
+    suspend fun getBooking(@RequestParam(value = "limit", required = false) limit: kotlin.Int?,
+                           @RequestParam(value = "offset", required = false) offset: kotlin.Int?
 ): ResponseEntity<Flow<RentInfoResponseDto>> {
         return getDelegate().getBooking(limit, offset)
     }
@@ -56,7 +57,8 @@ interface BookingApi {
             produces = ["application/json"],
             consumes = ["application/json"]
     )
-    suspend fun returnPhone(@PathVariable("bookingId") bookingId: kotlin.String, @RequestBody(required = false) returnPhoneRqDto: ReturnPhoneRqDto?
+    suspend fun returnPhone(@PathVariable("bookingId") bookingId: kotlin.String,
+                            @RequestBody(required = false) returnPhoneRqDto: ReturnPhoneRqDto?
 ): ResponseEntity<RentInfoResponseDto> {
         return getDelegate().returnPhone(bookingId, returnPhoneRqDto)
     }

@@ -32,7 +32,8 @@ interface PhoneApi {
             value = ["/phone"],
             produces = ["application/json"]
     )
-    suspend fun getPhones(@RequestParam(value = "limit", required = false) limit: kotlin.Int?, @RequestParam(value = "offset", required = false) offset: kotlin.Int?
+    suspend fun getPhones(@RequestParam(value = "limit", required = false) limit: kotlin.Int?,
+                          @RequestParam(value = "offset", required = false) offset: kotlin.Int?
 ): ResponseEntity<Flow<PhoneDetailsResponseDto>> {
         return getDelegate().getPhones(limit, offset)
     }
