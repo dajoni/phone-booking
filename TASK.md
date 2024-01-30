@@ -3,7 +3,7 @@
 * Return the solution or make it available to us on completion 
 * You may use any either Kotlin or Java
 
-# TASK:
+# DESCRIPTION:
 The mobile software testing team has 10 mobile phones that it needs to share for testing purposes.
 - Samsung Galaxy S9
 - 2x Samsung Galaxy S8
@@ -15,7 +15,14 @@ The mobile software testing team has 10 mobile phones that it needs to share for
 - iPhone X
 - Nokia 3310
 
-Please create an service that allows a phone to be booked / returned.
+The number of team members and available phones will be increasing over time.
+
+# TASK
+Please create an service that supports the following features:
+* View available phones
+* Book a phone
+* Return a phone
+* View details about a phone
 
 The following information should also be available for each phone 
 * Availability (Yes / No)
